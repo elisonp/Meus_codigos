@@ -1,2 +1,5 @@
 Fatiando a string de uma coluna do df
 https://acervolima.com/maneiras-de-aplicar-esquerda-direita-meio-em-pandas/
+
+Realizando a substituição de variaveis dentro da coluna
+https://sparkbyexamples.com/pandas/pandas-replace-by-examples/
