@@ -20,6 +20,6 @@ print(pessoas_df)
 
 pessoas_df.to_parquet("C:\Project\Meus_codigos\Spark\\files\pessoas.pq")
 
-parquet_df = pd.read_parquet("C:\Project\Meus_codigos\Spark\\files\pessoas.pq")
+parquet_df = pd.read_parquet("C:\Project\Meus_codigos\Spark\\files\pessoa'  s.pq")
 
 print(parquet_df)

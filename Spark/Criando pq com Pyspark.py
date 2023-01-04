@@ -1,12 +1,12 @@
 from pyspark.sql import SparkSession, Row
-
+import os
+# import sagemaker_pyspark
 
 # Criaremos uma sessão com o Spark.
-spark = SparkSession.builder.appName("demo-app").getOrCreate()
-
+spark = SparkSession.builder.master("local[*]").getOrCreate()
 
 # Criaremos um DataFrame com dados a serem salvos.
-'''pessoas_df = spark.createDataFrame([
+pessoas_df = spark.createDataFrame([
     Row(nome="Pedro", idade=15),
     Row(nome="João", idade=30),
     Row(nome="Maria", idade=19),
@@ -18,12 +18,12 @@ spark = SparkSession.builder.appName("demo-app").getOrCreate()
     Row(nome="Alice", idade=24),
     Row(nome="Marlei", idade=32),
     Row(nome="Marilene", idade=56),
-    Row(nome="Judite", idade=60),
+    Row(nome="Judite", idade=60)
 ])
 
 print(pessoas_df.show)
 
-pessoas_df.write.parquet("pessoas.parquet")'''
+'''pessoas_df.write.parquet("pessoas.parquet")
 # Salvaremos o DataFrame como um arquivo Parquet.
 # pessoas_df.write.parquet("C:\Project\Meus_codigos\Spark\\files\pessoas.parquet")
 data =[("James ","","Smith","36636","M",3000),
@@ -36,8 +36,9 @@ columns=["firstname","middlename","lastname","dob","gender","salary"]
 
 df = spark.createDataFrame(data,columns)
 
-df.write.csv("C:\Project\Meus_codigos\people.csv")
+print(df)
+df.write.parquet("C:\Project\Meus_codigos\people.pq")'''
 
-'''Carregaremos o arquivo Parquet que acabamos de criar para 
-efetuar algumas consultas, todas informações são preservadas.'''
-# parquet_df = spark.read.parquet("C:\Project\Meus_codigos\Spark\\files\pessoas.parquet")
+# Carregaremos o arquivo Parquet que acabamos de criar para 
+# efetuar algumas consultas, todas informações são preservadas.
+# parquet_df = spark.read.parquet("C:\Project\Meus_codigos\Spark\\files\pessoas.parquet")'''
